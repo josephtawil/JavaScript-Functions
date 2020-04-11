@@ -1,5 +1,5 @@
 //create object and assigning values
-var click = 
+
 var car =
 {
     doors: 2,
@@ -14,10 +14,19 @@ var car =
         {
             console.log("HONKKKKKK!!!!");
         },
-    accelerate: function()
-        {
-            if()
-        },
+    //drive to Work function 
+    //adds 10 miles to mileage
+    driveToWork: function()
+    {
+        this.mileage= this.mileage+10;
+        this.showMiles();
+    },
+    //drive function adds miles to mileage
+    drive: function(miles)
+    {
+        this.mileage = this.mileage + miles;
+        this.showMiles();
+    }
 
 };
 
@@ -29,9 +38,10 @@ console.log(car.doors);
 // car.mileage;
 // //printing out value of mileage
 // console.log(car.mileage);
-
 car.showMiles();
-
 //create a method that honks a horn
-
 car.honkHorn();
+//create a drive to work function
+car.driveToWork();
+//create a drive function
+car.drive(15);
